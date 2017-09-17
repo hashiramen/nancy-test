@@ -6,7 +6,9 @@ namespace nancy_test
     {
         public HomeModule()
         {
-            Get("/", args => "Hello from Nancy running on CoreCLR");
+            Get("/", args => {
+                return View["index", new {}];
+            });
         }
     }
 }
